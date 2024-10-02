@@ -25,6 +25,7 @@ import LoadingModal from "./components/LoadingModal";
 import { UserContext } from "./components/User";
 import { StateContext } from "./components/State";
 import ValioCarbonGrassFields from "./components/Sidebar/ValioCarbonGrassFields";
+import BuildingDetails from "./components/Sidebar/BuildingDetails";
 
 const VerificationRouter = (props) => {
   const {
@@ -209,6 +210,9 @@ export default function AppRouterSwitch() {
           <Switch>
             <Route path="/layers/fi-forest">
               <ForestArvometsa />
+            </Route>
+            <Route path="/layers/fi-buildings">
+              <BuildingDetails/>
             </Route>
             <Route path="/layers/fi-omaihka">
               <Omaihka />

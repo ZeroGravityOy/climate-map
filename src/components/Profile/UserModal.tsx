@@ -78,20 +78,20 @@ const UserModal = () => {
         className={classes.pane}
         style={{ display: modalState === "signup" ? "flex" : "none" }}
       >
-        <Signup></Signup>
+        <Signup/>
       </div>
 
       <div
         className={classes.pane}
         style={{ display: modalState === "login" ? "flex" : "none" }}
       >
-        <Login></Login>
+        <Login/>
       </div>
       <div
         className={classes.pane}
         style={{ display: modalState === "profile" ? "flex" : "none" }}
       >
-        <Profile></Profile>
+        <Profile/>
       </div>
     </div>
   );

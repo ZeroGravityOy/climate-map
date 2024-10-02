@@ -16,6 +16,7 @@ import './culverts';
 import './fi_biodiversity';
 import './fi_bogs';
 import './fi_building_energy_certificates';
+import './buildings/fi_building_efficiency_class';
 import './fi_helsinki_solar_potential';
 import './fi_property_id';
 import './fi_soils';

@@ -179,7 +179,7 @@ export const createPopup = (
 ) =>
   new mapboxgl0.Popup(options)
     .setLngLat(ev.lngLat)
-    .setHTML(sanitize(html))
+    .setHTML(sanitize(html,  { ADD_ATTR: ['target'] }))
     .addTo(map);
 
 // NB: mapbox-gl will break without the indirection here.

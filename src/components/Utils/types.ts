@@ -10,6 +10,7 @@ export type ProfileState =
   | "data"
   | "dataIntegrate"
   | "verification"
-  | "farmCarbon";
+  | "farmCarbon"
+  | "building";
 
 export type ModalState = "none" | "signup" | "login" | "profile";

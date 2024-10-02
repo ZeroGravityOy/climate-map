@@ -1,6 +1,7 @@
 import BiodiversityContent from "../Accordion/BiodiversityContent";
 import WetlandsContent from "../Accordion/WetlandsContent";
 import BuildingsContent from "../Accordion/BuildingsContent";
+import BuildingsContentNew from "../Accordion/BuildingsContentNew";
 import SnowCoverLossContent from "../Accordion/SnowCoverLossContent";
 import ForestContent from "../Accordion/ForestContent";
 import AirQualityContent from "../Accordion/AirQualityContent";
@@ -46,6 +47,10 @@ const drawerItems = [
   },
   {
     title: "Buildings",
+    content: BuildingsContentNew,
+  },
+  {
+    title: "Buildings (old)",
     content: BuildingsContent,
   },
   {

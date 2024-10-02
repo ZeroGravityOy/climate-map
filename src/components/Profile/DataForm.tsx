@@ -120,7 +120,7 @@ const DataForm = (props) => {
   const [disabled, setDisabled] = useState({
     forestOwner: true,
     farmOwner: false,
-    propertyOwner: true,
+    propertyOwner: false,
     termsAgreed: false,
   });
 
@@ -212,7 +212,7 @@ const DataForm = (props) => {
             inputProps={{ "aria-label": "primary checkbox" }}
             disabled={disabled["farmOwner"]}
           />
-          <InputLabel className={classes.checkboxText}>Farm owner</InputLabel>
+          <InputLabel className={classes.checkboxText} disabled={disabled["farmOwner"]}>Farm owner</InputLabel>
         </div>
         <div className={classes.checkboxContainer}>
           <Checkbox
@@ -222,7 +222,7 @@ const DataForm = (props) => {
             disabled={disabled["forestOwner"]}
             inputProps={{ "aria-label": "primary checkbox" }}
           />
-          <InputLabel className={classes.checkboxText} disabled={true}>
+          <InputLabel className={classes.checkboxText} disabled={disabled["forestOwner"]}>
             Forest owner
           </InputLabel>
         </div>
@@ -234,7 +234,7 @@ const DataForm = (props) => {
             disabled={disabled["propertyOwner"]}
             inputProps={{ "aria-label": "primary checkbox" }}
           />
-          <InputLabel className={classes.checkboxText} disabled={true}>
+          <InputLabel className={classes.checkboxText} disabled={disabled["propertyOwner"]}>
             Property owner
           </InputLabel>
         </div>

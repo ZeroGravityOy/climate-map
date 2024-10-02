@@ -8,7 +8,7 @@ const _selectedFeatures = observable<SelectedFeature[]>([]);
 export const selectedFeatures = _selectedFeatures.readOnly();
 
 // Toggle feature selection
-// NB: Requres feature.id to be set!
+// NB: Requires feature.id to be set!
 export const selectFeature = (props: SelectedFeature) => _selectedFeatures.update(
   fs => {
     const newId = props.feature.id
@@ -19,4 +19,4 @@ export const selectFeature = (props: SelectedFeature) => _selectedFeatures.updat
       : fs.concat([props])
   })
 
-  export const unsetFeatures = () => _selectedFeatures.set([])
+export const unsetFeatures = () => _selectedFeatures.set([])

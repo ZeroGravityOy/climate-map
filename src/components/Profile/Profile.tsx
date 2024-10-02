@@ -9,6 +9,7 @@ import FieldCarbon from "./FieldCarbon";
 import Login from "./Login";
 import { UserContext } from "../User";
 import { StateContext } from "../State";
+import OwnBuilding from "./OwnBuilding";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -60,20 +61,25 @@ const Profile = () => {
     <div className={classes.root}>
       <div className={classes.container}>
         {profileState === "data" && isLoggedIn && (
-          <DataForm handleClickNext={handleClickNext}></DataForm>
+          <DataForm handleClickNext={handleClickNext}/>
         )}
         {profileState === "dataIntegrate" && isLoggedIn && (
-          <IntegrationForm></IntegrationForm>
+          <IntegrationForm/>
         )}
         {profileState === "verification" && (
           <>
-            <VerificationForm></VerificationForm>
-            {!isLoggedIn && <Login></Login>}
+            <VerificationForm/>
+            {!isLoggedIn && <Login/>}
           </>
         )}
         {profileState === "fieldCarbon" && (
           <>
-            <FieldCarbon></FieldCarbon>
+            <FieldCarbon/>
+          </>
+        )}
+        {profileState === "building" && (
+          <>
+            <OwnBuilding/>
           </>
         )}
       </div>
